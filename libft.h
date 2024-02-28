@@ -12,5 +12,6 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 int	ft_strlen(char *str);
 void	*ft_memset(char *str, int c, size_t n);
+void	ft_bzero(char *str, size_t n)
 
 #endif
