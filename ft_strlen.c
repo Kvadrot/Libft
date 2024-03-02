@@ -6,13 +6,13 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:36:36 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/28 18:48:55 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/01 20:42:25 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	unsigned int	i;
 

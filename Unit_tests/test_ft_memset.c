@@ -3,6 +3,7 @@
 void	test_ft_memset(void)
 {
 	int errorState = 1;
+	char newSymb = 'd';
 
 	char testStringArr[100] = "";
 	char testStringArr1[] = "";
@@ -17,24 +18,21 @@ void	test_ft_memset(void)
 	char *fatherTestArr[] = { testStringArr, testStringArr1, testStringArr2, testStringArr3 };
 	char *fatherTestCustArr[] = { testCustArr, testCustArr1, testCustArr2, testCustArr3 };
 
-  	size_t sizes[] = {sizeof(testStringArr), sizeof(testStringArr1), sizeof(testStringArr2), sizeof(testStringArr3)};
-	size_t sizesCust[] = {sizeof(testCustArr), sizeof(testCustArr1), sizeof(testCustArr2), sizeof(testCustArr3)};
-
     for (int i = 0; i < 4; i++)
     {
-        for (int counter = 0; counter < 127; counter++)
+        for (int counter = 0; counter < 100; counter++)
         {
 
             // Call the functions to modify the strings
-            char *strOrig = memset(fatherTestArr[i], counter, sizes[i] - 1);
-            char *strMine = ft_memset(fatherTestCustArr[i], counter, sizesCust[i] - 1);
+            char *strOrig = memset(fatherTestArr[i], newSymb, counter);
+            char *strMine = ft_memset(fatherTestCustArr[i], newSymb, counter);
 
             // Compare the modified strings
-            if (strcmp(strOrig, strMine) != 0)
+            if (strncmp(strOrig, strMine, counter) != 0)
             {
                 printf("========================\n");
                 printf("Error: test_ft_memset\n");
-				printf("i = %d, counter = %d testingArrSize = %ld \n", i, counter, sizes[i]);
+				printf("i = %d, counter = %d testingArrSize = %d \n", i, newSymb, counter);
                 printf("memset(testingArr%d) strcmp(strOrig, strMine) = %d \n", i, strcmp(strOrig, strMine));
                 printf("========================\n");
                 errorState = 0;
