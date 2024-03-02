@@ -6,41 +6,23 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:01:25 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/28 19:24:23 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/02 18:48:33 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-void	*ft_memset(char *str, int c, size_t n)
+void	*ft_memset(void *any, int c, size_t len)
 {
-	unsigned int	i;
+	size_t	counter;
+	char	*casted;
 
-	i = 0;
-	while (i < n)
+	counter = 0;
+	casted = (char *)any;
+	while (counter < len)
 	{
-		str[i] = c;
-		i++;
+		casted[counter] = c;
+		counter++;
 	}
-	return (str);
+	return (casted);
 }
-/*
-int main() {
-    char str[50];
-	char str1[50];
-
-    // Fill the str array with 'A'
-	ft_memset(str, 'A', sizeof(str));
-    memset(str1, 'B', sizeof(str1));
-	// ft_memset(str, 'A', 60);
-	// memset(str1, 'B', 60);
-	
-   
-
-    // Print the result
-	printf("Filled string: %s\n", str);
-    printf("Filled string: %s\n", str1);
-
-    return 0;
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:18:32 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/27 14:44:38 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/02 18:33:17 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,3 @@ int	ft_isdigit(int someInt)
 	else
 		return (0);
 }
-/*
-#include <stdio.h>
-#include <ctype.h>
-
-int main(void) {
-    int some = 48;
-	
-
-    printf("%i \n", ft_isdigit(some));
-    int origResult = ft_isdigit(some);
-    printf("%i", origResult);
-    return 0;
-}
-*/

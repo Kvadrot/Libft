@@ -6,20 +6,22 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:37:19 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/28 20:09:19 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/02 18:50:12 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-void	ft_bzero(char *str, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
+	char	*casted;
 
 	i = 0;
+	casted = (char *)s;
 	while (i < n)
 	{
-		str[i] = '\0';
+		casted[i] = '\0';
 		i++;
 	}
 }
