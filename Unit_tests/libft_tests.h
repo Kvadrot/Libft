@@ -12,5 +12,6 @@ void	test_ft_strlen();
 void	test_ft_memset();
 void	test_ft_bzero();
 void	test_ft_memcpy();
+void 	test_ft_memmove();
 
 #endif

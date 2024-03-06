@@ -11,4 +11,5 @@ int main(void) {
 	test_ft_strlen();
 	test_ft_memset();
 	test_ft_memcpy();
+	test_ft_memmove();
 }
