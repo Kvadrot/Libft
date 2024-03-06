@@ -25,7 +25,7 @@ void test_ft_memmove(void)
 
 	if (errorState == 1)
     {
-        printf("test_ft_memset: OK!\n");
+        printf("test_ft_memmove: OK!\n");
     }
 
 }

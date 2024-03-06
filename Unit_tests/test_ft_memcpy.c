@@ -22,6 +22,6 @@ void	test_ft_memcpy()
 
 	if (errorState == 1)
 	{
-		printf("ft_memcpy_test: OK!\n");
+		printf("test_ft_memcpy: OK!\n");
 	}
 }

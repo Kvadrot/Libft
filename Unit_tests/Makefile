@@ -16,7 +16,7 @@ TARGET = unit_tests.out
 all: $(TARGET)
 
 $(TARGET): $(OBJS) $(TEST_OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lbsd
 
 clean:
 	rm -f $(TARGET) $(OBJS) $(TEST_OBJS)
