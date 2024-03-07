@@ -4,7 +4,7 @@
 void	test_ft_strchr(void)
 {
 	int errorState = 1;
-	char testStringArr[] = "01234567899 qwdjko okDJ32J98U9 283U0U0RU20 DDASD52352g7808-3UR0UK";
+	char testStringArr[] = "0aa \0 2DDASD52352g7808-3UR0UK";
 
 	for (int i = 0; i < 250; i++)
 	{

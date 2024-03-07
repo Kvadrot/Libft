@@ -18,5 +18,6 @@ void	test_ft_strlcat();
 void	test_ft_toupper();
 void	test_ft_tolower();
 void	test_ft_strchr();
+void	test_ft_strrchr();
 
 #endif
