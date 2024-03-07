@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:40:19 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/07 12:44:26 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/07 13:13:10 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_len = strlen(dst);
 	dst_dynamiclen = strlen(dst);
 	local_size = 0;
-	if (size <= 1 || size < dst_len)
+	if (size <= 1 || size <= dst_len)
 		return (ft_strlen(src) + size);
 	while (src[local_size] != '\0' && local_size < size - 1)
 	{

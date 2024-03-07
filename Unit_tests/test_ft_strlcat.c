@@ -2,6 +2,7 @@
 #include "../libft.h"
 
 
+
 int	ft_test_same_arr(void) {
 	char source[20] = "012345";
 	char org_source[20] = "012345";
@@ -33,20 +34,18 @@ int	ft_test_same_arr(void) {
 	return (result);
 }
 
-void test_ft_strlcat(void)
+int	ft_regular_teststrlcat(size_t testBytes)
 {
 	char test_arr[20] = "abqc";
 	char test_arr1[20] = "01234567891";
 
 	char testOrig_arr[20] = "abqc";
 	char testOrig_arr1[20] = "01234567891";
-	size_t localTestBytes = 3;
+	size_t localTestBytes = testBytes;
 
 	int errorState = 1;
 	size_t origRes = strlcat(testOrig_arr, testOrig_arr1, localTestBytes);
 	size_t mineRes = ft_strlcat(test_arr, test_arr1, localTestBytes);
-	
-
 
 	if (origRes != mineRes)
 	{
@@ -72,10 +71,23 @@ void test_ft_strlcat(void)
 	} else if (ft_test_same_arr() == 0) {
 		errorState = 0;
 	}
+	return (errorState);
+}
 
-	if (errorState == 1)
-    {
-        printf("test_ft_strlcat: OK!\n");
-    }
+void test_ft_strlcat(void)
+{
 
+	int error = 1;
+	size_t testBytes = 10;
+	while (testBytes > 0)
+	{
+		if (ft_regular_teststrlcat(testBytes) == 0)
+		{
+			error = 0;
+		}
+		testBytes--;
+	}
+	if (error == 1) {
+		printf("test_ft_strlcat: OK!\n");
+	}
 }
