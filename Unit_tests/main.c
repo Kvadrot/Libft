@@ -18,4 +18,5 @@ int main(void) {
 	test_ft_tolower();
 	test_ft_strchr();
 	test_ft_strrchr();
+	test_ft_strncmp();
 }

@@ -19,5 +19,6 @@ void	test_ft_toupper();
 void	test_ft_tolower();
 void	test_ft_strchr();
 void	test_ft_strrchr();
+void	test_ft_strncmp();
 
 #endif
