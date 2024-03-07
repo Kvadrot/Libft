@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 14:04:43 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/06 20:52:15 by itykhono         ###   ########.fr       */
+/*   Created: 2024/03/06 16:40:19 by itykhono          #+#    #+#             */
+/*   Updated: 2024/03/07 12:29:26 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	local_size;
+	size_t	dst_dynamiclen;
+	size_t	dst_len;
 
-	if (!dst || !src)
-		return (0);	
+	dst_len = strlen(dst);
+	dst_dynamiclen = strlen(dst);
 	local_size = 0;
-	if (size < 1)
-		return (ft_strlen(src));
+	if (size <= 1 || size < dst_len)
+		return (ft_strlen(src) + size);
+		
 	while (src[local_size] != '\0' && local_size < size - 1)
 	{
-		dst[local_size] = src[local_size];
+		dst[dst_dynamiclen] = src[local_size];
 		local_size++;
+		dst_dynamiclen++;
 	}
-	dst[local_size] = '\0';
-	return (ft_strlen(src));
+	dst[local_size] = '\0'; 
+	if (size > dst_len)
+		return (dst_len + ft_strlen(src));
+	else
+		return (local_size + ft_strlen(src));
+		
 }

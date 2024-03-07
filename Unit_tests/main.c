@@ -13,4 +13,5 @@ int main(void) {
 	test_ft_memcpy();
 	test_ft_memmove();
 	test_ft_strlcpy();
+	test_ft_strlcat();
 }

@@ -11,15 +11,15 @@ void test_ft_strlcpy(void)
 	int testBytes = 1;
 
 	int errorState = 1;
-	int origRes = strlcpy(testOrig_arr, testOrig_arr1, testBytes);
-	int mineRes = ft_strlcpy(test_arr, test_arr1, testBytes);
+	size_t origRes = strlcpy(testOrig_arr, testOrig_arr1, testBytes);
+	size_t mineRes = ft_strlcpy(test_arr, test_arr1, testBytes);
 
 	if (origRes != mineRes)
 	{
 		printf("========================\n");
         printf("Error: test_ft_strlcpy\n");
-		printf("strlcpy() = %ld \n", strlcpy(testOrig_arr, testOrig_arr1, testBytes));
-		printf("ft_strlcpy() = %ld \n", ft_strlcpy(test_arr, test_arr1, testBytes));
+		printf("strlcpy() = %ld \n", origRes);
+		printf("ft_strlcpy() = %ld \n", mineRes);
         printf("test_arr[] = %s ", test_arr);
 		printf("testOrig_arr1[] = %s\n", testOrig_arr);
         printf("========================\n");
