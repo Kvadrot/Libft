@@ -14,4 +14,5 @@ int main(void) {
 	test_ft_memmove();
 	test_ft_strlcpy();
 	test_ft_strlcat();
+	test_ft_toupper();
 }
