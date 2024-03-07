@@ -16,5 +16,6 @@ void 	test_ft_memmove();
 void	test_ft_strlcpy();
 void	test_ft_strlcat();
 void	test_ft_toupper();
+void	test_ft_tolower();
 
 #endif
