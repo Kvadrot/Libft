@@ -20,4 +20,5 @@ int main(void) {
 	test_ft_strrchr();
 	test_ft_strncmp();
 	test_ft_memchr();
+	test_ft_memcmp();
 }
