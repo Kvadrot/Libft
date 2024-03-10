@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 14:48:39 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/10 13:47:50 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/10 15:01:31 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,22 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (ft_strlen(little) == 0)
+	size_t	i;
+
+	if (*little == '\0')
 		return ((char *)big);
-	while (big != NULL)
+	while (*big && len > 0)
 	{
-		big = ft_strchr(big, little[0]);
-		if (ft_strncmp(big, little, len) == 0)
-			return ((char *)big);
+		if (*big == *little)
+		{
+			i = 0;
+			while (little[i] && big[i] && little[i] == big[i] && i < len)
+				i++;
+			if (little[i] == '\0')
+				return ((char *)big);
+		}
 		big++;
+		len--;
 	}
 	return (NULL);
 }
