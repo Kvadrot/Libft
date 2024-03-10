@@ -1,8 +1,6 @@
 
 #include "../libft.h"
 
-
-
 int	ft_test_same_arr(void) {
 	char source[20] = "012345";
 	char org_source[20] = "012345";

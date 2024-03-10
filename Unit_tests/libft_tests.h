@@ -22,6 +22,6 @@ void	test_ft_strrchr();
 void	test_ft_strncmp();
 void	test_ft_memchr();
 void	test_ft_memcmp();
-
+void	test_ft_strnstr();
 
 #endif
