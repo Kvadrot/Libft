@@ -23,5 +23,6 @@ void	test_ft_strncmp();
 void	test_ft_memchr();
 void	test_ft_memcmp();
 void	test_ft_strnstr();
+void	test_ft_atoi();
 
 #endif

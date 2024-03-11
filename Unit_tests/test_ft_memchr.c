@@ -4,7 +4,7 @@
 void	test_ft_memchr()
 {
 	char testArr[20] = "0123456789";
-	int searchChar = 52;
+	int searchChar = 128;
 	size_t maxSize = 4;
 	int errorState = 1;
 

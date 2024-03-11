@@ -6,11 +6,11 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:37:19 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/02 18:50:12 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/11 12:26:51 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {
