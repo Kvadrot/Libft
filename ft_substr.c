@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/07 20:34:04 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/12 15:43:16 by itykhono         ###   ########.fr       */
+/*   Created: 2024/03/12 15:42:58 by itykhono          #+#    #+#             */
+/*   Updated: 2024/03/12 20:36:00 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	search_char;
-	size_t	slen;
+	char	*substr;
 
-	search_char = (char)c;
-	slen = ft_strlen(s) - 1;
-	if (c == '\0')
-		return ((char *)&s[ft_strlen(s)]);
-	else
-	{
-		while (s[slen] > 0)
-		{
-			if (s[slen] == search_char)
-				return ((char *)&s[slen]);
-			slen--;
-		}
-	}
-	return (NULL);
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s + start);
+	substr = ft_calloc(len + 1, sizeof(char));
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len);
+	return (substr);
 }
