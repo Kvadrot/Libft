@@ -3,8 +3,8 @@
 
 void	test_ft_strdup()
 {
-	char *origCoppy = "01234";
-	char *testCopy = "01234";
+	char *origCoppy = "";
+	char *testCopy = "";
 
 	char *origResult = strdup(origCoppy);
 	char *testResult = ft_strdup(testCopy);
