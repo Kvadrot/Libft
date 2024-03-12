@@ -25,5 +25,6 @@ void	test_ft_memcmp();
 void	test_ft_strnstr();
 void	test_ft_atoi();
 void	test_ft_calloc();
+void	test_ft_strdup();
 
 #endif

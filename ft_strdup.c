@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 16:33:56 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/12 13:16:51 by itykhono         ###   ########.fr       */
+/*   Created: 2024/03/12 13:02:29 by itykhono          #+#    #+#             */
+/*   Updated: 2024/03/12 15:09:07 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" 
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	counter;
+	char	*newstr;
+	char	*start;
 
-	if ((char *)dest > (char *)src)
+	if (!*s)
+		return (NULL);
+	newstr = (char *)malloc((ft_strlen(s) + 1) * sizeof(newstr));
+	if (!newstr)
+		return (NULL);
+	start = newstr;
+	while (*s)
 	{
-		counter = n;
-		while (counter > 0)
-		{
-			*((char *)dest + counter) = *((char *)src + counter);
-			counter--;
-		}
-		*((char *)dest + counter) = *((char *)src + counter);
+		*newstr++ = *s++;
 	}
-	else
-	{
-		counter = 0;
-		while (counter < n)
-		{
-			*((char *)dest + counter) = *((char *)src + counter);
-			counter++;
-		}
-	}
-	return (dest);
+	*newstr = '\0';
+	return (start);
 }
