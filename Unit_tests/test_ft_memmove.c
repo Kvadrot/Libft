@@ -17,7 +17,7 @@ void test_ft_memmove(void)
 	{
 		printf("========================\n");
         printf("Error: test_ft_memmove\n");
-		printf("memcmp(test_arr, test_arr1, testBytes) = %d \n", memcmp(test_arr + 1, test_arr1, testBytes));
+		printf("memcmp(test_arr, test_arr1, testBytes) = %d \n", memcmp(test_arr + 3, test_arr1, testBytes));
         printf("test_arr[] = %s\ntest_arr1[] = %s\n", test_arr, test_arr1);
         printf("========================\n");
         errorState = 0;

@@ -1,7 +1,7 @@
 
 #include "../libft.h"
 
-void	test_ft_atoi(void)
+void	test_ft_atoi()
 {
 	int origVal;
 	int mineVal;

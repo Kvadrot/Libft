@@ -23,4 +23,5 @@ int main(void) {
 	test_ft_memcmp();
 	test_ft_strnstr();
 	test_ft_atoi();
+	test_ft_calloc();
 }
