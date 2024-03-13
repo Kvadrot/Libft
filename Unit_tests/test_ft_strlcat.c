@@ -2,13 +2,13 @@
 #include "../libft.h"
 
 int	ft_test_same_arr(void) {
-	char source[20] = "012345";
-	char org_source[20] = "012345";
+	char source[] = "012345";
+	char org_source[] = "012345";
 	size_t localTestBytes = 3;
 	size_t origRes = strlcat(org_source + 1, org_source, localTestBytes);
 	size_t mineRes = ft_strlcat(source + 1, source, localTestBytes);
 	int result = 4;
-	if (origRes != mineRes)
+	if (origRes != mineRes || strcmp(source, org_source) != 0)
 	{
 		printf("========================\n");
         printf("Error: test_ft_strlcat\n");

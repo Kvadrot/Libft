@@ -27,5 +27,6 @@ void	test_ft_atoi();
 void	test_ft_calloc();
 void	test_ft_strdup();
 void	test_ft_substr();
+void	test_ft_strjoin();
 
 #endif

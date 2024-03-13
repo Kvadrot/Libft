@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:40:19 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/07 13:13:10 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/13 11:35:24 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_dynamiclen;
 	size_t	dst_len;
 
-	dst_len = strlen(dst);
-	dst_dynamiclen = strlen(dst);
+	dst_len = ft_strlen(dst);
+	dst_dynamiclen = ft_strlen(dst);
 	local_size = 0;
 	if (size <= 1 || size <= dst_len)
 		return (ft_strlen(src) + size);

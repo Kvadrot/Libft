@@ -26,4 +26,5 @@ int main(void) {
 	test_ft_calloc();
 	test_ft_strdup();
 	test_ft_substr();
+	test_ft_strjoin();
 }
