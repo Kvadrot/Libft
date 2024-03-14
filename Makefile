@@ -1,13 +1,31 @@
+SRCS = $(wildcard *.c)
+OBJS			= $(SRCS:.c=.o)
 
-Makefile: ft_isalpha.c
-    cc -o libft.a ft_isalpha.c -I
+BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
+					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
+					ft_lstmap.c ft_lstnew.c ft_lstsize.c
+BONUS_OBJS		= $(BONUS:.c=.o)
 
-#clean:
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
-#all:
+NAME			= libft.a
 
-#clean:
+all:			$(NAME)
 
-#fclean:
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
-#re:
+clean:
+				$(RM) $(OBJS) $(BONUS_OBJS)
+
+fclean:			clean
+				$(RM) $(NAME)
+
+re:				fclean $(NAME)
+
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:			all clean fclean re bonus
