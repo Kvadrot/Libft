@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:07 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/14 21:21:48 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:56:07 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result = ft_calloc(s1_counter + 2, sizeof(char));
 	if (!result)
 		return (NULL);
-	result = ft_substr(s1, 0, s1_counter + 2);
+	result = ft_substr(s1, 0, s1_counter + 1);
 	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:20:40 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/15 14:45:58 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:54:17 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 		{
 			sub_counter++;
 		}
-		tempstr = ft_substr(s, main_counter, sub_counter - main_counter + 1);
+		tempstr = ft_substr(s, main_counter, sub_counter - main_counter);
 		s += sub_counter;
 		main_counter = 0;
 		// printf("startInd = %d\n", main_counter);
