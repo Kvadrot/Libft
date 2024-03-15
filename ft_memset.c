@@ -6,11 +6,11 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 19:01:25 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/02 18:48:33 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/15 13:00:21 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 void	*ft_memset(void *any, int c, size_t len)
 {

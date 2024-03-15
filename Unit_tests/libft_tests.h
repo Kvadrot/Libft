@@ -29,6 +29,7 @@ void	test_ft_strdup();
 void	test_ft_substr();
 void	test_ft_strjoin();
 void	test_ft_strtrim();
+void	test_ft_split();
 
 
 #endif
