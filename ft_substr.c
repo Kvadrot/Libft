@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 15:42:58 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/12 20:36:00 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:16:22 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = ft_calloc(len + 1, sizeof(char));
 	if (!substr)
 		return (NULL);
-	ft_strlcpy(substr, s + start, len);
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }

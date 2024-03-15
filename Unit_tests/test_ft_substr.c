@@ -3,9 +3,9 @@
 
 void	test_ft_substr()
 {
-	char *test = "0123456789";
+	char	str[] = "lorem ipsum dolor sit amet";
 
-	char *subStr = ft_substr(test, 5, 10);
+	char *subStr = ft_substr(str, 0, 10);
 
 	int errorState = 1;
 	
@@ -13,7 +13,7 @@ void	test_ft_substr()
 	{
 		printf("========================\n");
 		printf("Error: test_ft_substr\n");
-		printf("substr(0123456789 ,5, 10) = %s instead 5678", subStr);
+		printf("substr(0123456789 ,5, 10) = %s instead 5678\n", subStr);
 		printf("========================\n");
 		errorState = 0;
 	} 
