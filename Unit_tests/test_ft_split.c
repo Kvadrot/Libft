@@ -3,8 +3,9 @@
 
 void test_ft_split()
 {
-	char *test = "||";
-	char spaceChar = '|';
+	char *test =   "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char spaceChar = ' ';
+
 	char **mainstr = ft_split(test, spaceChar);
 	if (!mainstr)
 		printf("gamno");
