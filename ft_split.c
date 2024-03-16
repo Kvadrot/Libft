@@ -6,20 +6,20 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:20:40 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/16 11:44:07 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/16 11:48:34 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_free_split(char **split_result)
+static char	**ft_free_split(char **split_result, int words_amount)
 {
-	size_t	i;
+	int	i;
 
 	if (!split_result)
 		return (NULL);
 	i = 0;
-	while (split_result[i] != NULL)
+	while (i < words_amount)
 	{
 		free(split_result[i]);
 		i++;
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 		tempstr = ft_substr(s, main_counter, sub_counter - main_counter);
 		s += sub_counter;
 		if (!tempstr)
-			return (ft_free_split(result));
+			return (ft_free_split(result, words_counter));
 		result[words_counter] = tempstr;
 		words_counter++;
 	}
