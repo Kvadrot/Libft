@@ -12,7 +12,7 @@ void test_ft_split()
         " lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse",
         "apple,banana,orange ",
         "one:two:three",
-        " This is a test string "
+        " This is a test string ",
 		""
         // Add more test strings here if needed
     };
@@ -30,7 +30,7 @@ void test_ft_split()
         {"apple", "banana", "orange ", NULL},
         {"one", "two", "three", NULL},
         {"This", "is", "a", "test", "string", NULL},
-		{""}
+		{NULL}
         // Add more expected results here if needed
     };
 
@@ -73,6 +73,3 @@ void test_ft_split()
         printf("test_ft_split: OK!\n");
     }
 }
-
-
-
