@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 14:55:38 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/18 19:57:33 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 20:09:19 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int		ind;
 	char	search_char;
 
-	if (!s)
-		return (NULL);
 	ind = 0;
 	search_char = (char)c;
 	if (c == '\0')
