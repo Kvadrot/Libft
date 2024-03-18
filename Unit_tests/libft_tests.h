@@ -34,5 +34,6 @@ void	test_ft_itoa();
 void	test_ft_strmapi();
 void	test_ft_striteri();
 void	test_ft_putchar_fd();
+void	test_ft_putstr_fd();
 
 #endif
