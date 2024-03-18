@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 16:33:56 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/12 13:16:51 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 18:29:16 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		counter = n;
 		while (counter > 0)
 		{
-			*((char *)dest + counter) = *((char *)src + counter);
 			counter--;
+			*((char *)dest + counter) = *((char *)src + counter);
 		}
-		*((char *)dest + counter) = *((char *)src + counter);
 	}
 	else
 	{
