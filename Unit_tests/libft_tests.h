@@ -33,5 +33,6 @@ void	test_ft_split();
 void	test_ft_itoa();
 void	test_ft_strmapi();
 void	test_ft_striteri();
+void	test_ft_putchar_fd();
 
 #endif
