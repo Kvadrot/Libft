@@ -34,4 +34,5 @@ int main(void) {
 	test_ft_striteri();
 	test_ft_putchar_fd();
 	test_ft_putstr_fd();
+	test_ft_putendl_fd();
 }

@@ -1,6 +1,6 @@
 
 #include "../libft.h"
-#include <fcntl.h>
+#include "libft_tests.h"
 
 
 void test_ft_putchar_fd()

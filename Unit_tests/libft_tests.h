@@ -2,6 +2,7 @@
 #define LIBFT_TESTS
 
 #include <bsd/string.h>
+#include <fcntl.h>
 
 void	test_ft_isalpha();
 void	test_ft_isdigit();
@@ -35,5 +36,6 @@ void	test_ft_strmapi();
 void	test_ft_striteri();
 void	test_ft_putchar_fd();
 void	test_ft_putstr_fd();
+void	test_ft_putendl_fd();
 
 #endif
