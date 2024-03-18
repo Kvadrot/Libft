@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 16:40:19 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/13 11:35:24 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 19:52:56 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,20 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	local_size;
-	size_t	dst_dynamiclen;
 	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
 	dst_len = ft_strlen(dst);
-	dst_dynamiclen = ft_strlen(dst);
-	local_size = 0;
-	if (size <= 1 || size <= dst_len)
-		return (ft_strlen(src) + size);
-	while (src[local_size] != '\0' && local_size < size - 1)
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (src_len + size);
+	i = 0;
+	while (src[i] != '\0' && dst_len + i < size - 1)
 	{
-		dst[dst_dynamiclen] = src[local_size];
-		local_size++;
-		dst_dynamiclen++;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	dst[local_size] = '\0';
-	if (size > dst_len)
-		return (dst_len + ft_strlen(src));
-	else
-		return (local_size + ft_strlen(src));
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
