@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 13:51:01 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/18 19:28:55 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 21:00:43 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	ind;
-	int		s1len;
-	int		s2len;
+	const unsigned char	*ss1;
+	const unsigned char	*ss2;
+	size_t				i;
 
-	ind = 0;
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	if (n == 0)
-		return (0);
-	while (((char *)s1)[ind] != '\0'
-		&& ((char *)s2)[ind] != '\0' && ind < n)
+	i = 0;
+	ss1 = (const unsigned char *)s1;
+	ss2 = (const unsigned char *)s2;
+	while (i < n)
 	{
-		if (((unsigned char *)s1)[ind] != ((unsigned char *)s2)[ind])
-			return (((unsigned char *)s1)[ind] - ((unsigned char *)s2)[ind]);
-		ind++;
+		if (ss1[i] != ss2[i])
+			return (ss1[i] - ss2[i]);
+		i++;
 	}
-	if (s1len > s2len && ind < n)
-		return (0 + ((unsigned char *)s1)[ind]);
-	else if (s1len < s2len && ind < n)
-		return (0 - ((unsigned char *)s2)[ind]);
 	return (0);
 }
