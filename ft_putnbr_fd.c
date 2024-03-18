@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 10:14:47 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/18 14:51:46 by itykhono         ###   ########.fr       */
+/*   Created: 2024/03/18 14:37:33 by itykhono          #+#    #+#             */
+/*   Updated: 2024/03/18 14:56:15 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int someChar)
+#include "libft.h"
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	if ((someChar >= 'A' && someChar <= 'Z')
-		|| (someChar >= 'a' && someChar <= 'z'))
-		return (1);
-	else
-		return (0);
+	char	*str;
+	int		len;
+
+	str = ft_itoa(n);
+	len = ft_strlen(str);
+	write(fd, str, len);
 }

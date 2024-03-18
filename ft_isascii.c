@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 12:22:27 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/28 15:42:17 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 14:51:47 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-/*
-int main(void) {
-    int some = 128;
-	int i = 0;
-	for (i = 0; i < 140; i++) {
-		printf("%i num %i \n", i, ft_isascii(i));
-		// printf("%i num %i \n", i, isascii(i));
-	}
-
-    return 0;
-}
-*/

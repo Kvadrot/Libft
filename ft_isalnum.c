@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:46:30 by itykhono          #+#    #+#             */
-/*   Updated: 2024/02/28 19:36:04 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 14:51:20 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ int	ft_isalnum(int some_val)
 		return (0);
 	}
 }
-/*
-int main()
-{
-	int a = 65;
-	printf("%i", ft_isalnum(a));
-}
-*/

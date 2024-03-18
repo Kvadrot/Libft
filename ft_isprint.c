@@ -6,11 +6,11 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:31:30 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/01 20:08:01 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 14:51:49 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -19,24 +19,4 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-/*
-void	ft_printerror(int c)
-{
-	printf("results are different: ft_isprint -> %i \n", ft_isprint(c));
-	printf("isprint -> %i \n", isprint(c));
-	printf("this happend to %i \n\n\n: %c", c, c);
-}
 
-int main(void) {
-	int c;
-   	for(c = 1; c <= 127; ++c)
-  		if (ft_isprint(c) == 0 && ft_isprint(c) != isprint(c))
-   		{
-			ft_printerror(c);
-  		} else if (ft_isprint(c) > 0 && ft_isprint(c) != 1) {
-			ft_printerror(c);
-		}
-
-    return (0);
-}
-*/
