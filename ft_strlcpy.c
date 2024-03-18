@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 14:04:43 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/06 20:52:15 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 15:06:37 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	local_size;
 
 	if (!dst || !src)
-		return (0);	
+		return (0);
 	local_size = 0;
 	if (size < 1)
 		return (ft_strlen(src));

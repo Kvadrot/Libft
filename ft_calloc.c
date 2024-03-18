@@ -6,15 +6,15 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 17:04:49 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/13 18:29:47 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/18 15:07:28 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
