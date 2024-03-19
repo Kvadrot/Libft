@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 13:02:29 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/13 10:18:31 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/19 13:59:09 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*newstr;
 	char	*start;
 
-	if (!s)
-		return (NULL);
-	newstr = (char *)malloc((ft_strlen(s) + 1) * sizeof(newstr));
+	newstr = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!newstr)
 		return (NULL);
 	start = newstr;

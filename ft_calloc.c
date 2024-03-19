@@ -6,7 +6,7 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 17:04:49 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/18 15:07:28 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/19 14:02:06 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (NULL);
-	if (2147483647 / size < nmemb)
+	{
+		nmemb = 1;
+		size = 1;
+	}
+	if (2147483647 / nmemb < size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, nmemb);
+	memset(ptr, '\0', size * nmemb);
 	return (ptr);
 }
