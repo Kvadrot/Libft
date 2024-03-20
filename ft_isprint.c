@@ -6,11 +6,9 @@
 /*   By: itykhono <itykhono@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:31:30 by itykhono          #+#    #+#             */
-/*   Updated: 2024/03/18 15:05:16 by itykhono         ###   ########.fr       */
+/*   Updated: 2024/03/20 13:45:38 by itykhono         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
